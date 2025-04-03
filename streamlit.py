@@ -36,7 +36,7 @@ if st.button('Predict'):
     input_data['Gender'] = input_data['Gender'].map({'Male': 0, 'Female': 1})
 
 prediction=model.predict(input_data)
-probability=model.predict_proba(Input_data)[0][1]
+probability=model.predict_proba(input_data)[0][1]
 
 st.write(f'Prediction:{"Interested" if prediction[0]==1 else "Not Interested"}')
 st.write(f'Probability of being interested:{probability:.2f}')
